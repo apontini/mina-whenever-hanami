@@ -1,6 +1,6 @@
 set :whenever_name, -> { "#{fetch(:domain)}_#{fetch(:hanami_env)}" }
 set :environment_variable, "HANAMI_ENV"
-set :bundle_command, Whenever.bundler? ? "#{fetch(:environment_variable)}='#{fetch(:hanami_env)}' bundle exec" : ""
+set :bundle_command, "#{fetch(:environment_variable)}='#{fetch(:hanami_env)}' bundle exec"
 
 namespace :whenever do
   desc 'Clear crontab'
