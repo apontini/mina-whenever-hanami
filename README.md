@@ -23,7 +23,7 @@ Or install it yourself as:
 
 in `deploy.rb`
 
-    require 'mina/whenever'
+    require 'mina/whenever/hanami'
 
     set :hanami_env,    '<your-env>'
 
