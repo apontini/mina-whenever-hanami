@@ -1,7 +1,7 @@
 # Mina::Whenever::Hanami
 
 This is a whenever plugin for [mina](https://github.com/mina-deploy/mina), adapted for [Hanami](https://hanamirb.org/) ruby framework.
-This gem was developed starting from [mgrachev mina-whenever](https://github.com/mgrachev/mina-hanami) gem, huge thanks to him!
+This gem was developed starting from [d4be4st mina-whenever](https://github.com/mina-deploy/mina-whenever) gem, huge thanks to him!
 
 ## Installation
 
