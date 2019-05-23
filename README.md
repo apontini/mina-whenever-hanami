@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/mina-whenever-hanami.svg)](https://badge.fury.io/rb/mina-whenever-hanami) ![Gem](https://img.shields.io/gem/dt/mina-whenever-hanami.svg?color=limegreen&style=popout) 
+
 # Mina::Whenever::Hanami
 
 This is a whenever plugin for [mina](https://github.com/mina-deploy/mina), adapted for [Hanami](https://hanamirb.org/) ruby framework.
