@@ -40,7 +40,7 @@ in `deploy.rb`
 
 ## Configuration
 
-These are the settings you can set:
+These are the settings you can change:
 
     set :whenever_name # default: "#{domain}_#{hanami_env}"
 
