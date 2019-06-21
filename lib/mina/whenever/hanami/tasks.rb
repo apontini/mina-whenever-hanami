@@ -7,7 +7,7 @@ namespace :whenever do
   task clear: :remote_environment do
     comment "Clear crontab for #{fetch(:whenever_name)}"
     in_path fetch(:current_path) do
-      command "#{fetch(:bundle_bin)} exec whenever --clear-crontab #{fetch(:whenever_name)} --set 'environment=#{fetch(:hanami_env)}&path=#{fetch(:current_path)}'"
+      command "#{fetch(:bundle_bin)} exec whenever --load-file #{fetch(:whenever_file, 'config/scheduler.rb')} --clear-crontab #{fetch(:whenever_name)} --set 'environment=#{fetch(:hanami_env)}&path=#{fetch(:current_path)}'"
     end
   end
 
@@ -15,7 +15,7 @@ namespace :whenever do
   task update: :remote_environment do
     comment "Update crontab for #{fetch(:whenever_name)}"
     in_path fetch(:current_path) do
-      command "#{fetch(:bundle_bin)} exec whenever --update-crontab #{fetch(:whenever_name)} --set 'environment=#{fetch(:hanami_env)}&path=#{fetch(:current_path)}'"
+      command "#{fetch(:bundle_bin)} exec whenever --load-file #{fetch(:whenever_file, 'config/scheduler.rb')} --update-crontab #{fetch(:whenever_name)} --set 'environment=#{fetch(:hanami_env)}&path=#{fetch(:current_path)}'"
     end
   end
 
@@ -23,7 +23,7 @@ namespace :whenever do
   task write: :remote_environment do
     comment "Write crontab for #{fetch(:whenever_name)}"
     in_path fetch(:current_path) do
-      command "#{fetch(:bundle_bin)} exec whenever --write-crontab #{fetch(:whenever_name)} --set 'environment=#{fetch(:hanami_env)}&path=#{fetch(:current_path)}'"
+      command "#{fetch(:bundle_bin)} exec whenever --load-file #{fetch(:whenever_file, 'config/scheduler.rb')} --write-crontab #{fetch(:whenever_name)} --set 'environment=#{fetch(:hanami_env)}&path=#{fetch(:current_path)}'"
     end
   end
 end
