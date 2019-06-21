@@ -5,7 +5,7 @@ set :bundle_command, "#{fetch(:environment_variable)}='#{fetch(:hanami_env)}' bu
 namespace :whenever do
   desc 'Clear crontab'
   task clear: :remote_environment do
-    comment "Clear contrab for #{fetch(:whenever_name)}"
+    comment "Clear crontab for #{fetch(:whenever_name)}"
     in_path fetch(:current_path) do
       command "#{fetch(:bundle_bin)} exec whenever --clear-crontab #{fetch(:whenever_name)} --set 'environment=#{fetch(:hanami_env)}&path=#{fetch(:current_path)}'"
     end
